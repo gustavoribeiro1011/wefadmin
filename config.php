@@ -5,38 +5,47 @@
   @Developer: Gustavo Henrique Ribeiro  
  */
 
-  session_start();
+session_start();
 
-  $app_name= 'WEF Admin';
+$app_name = 'WEF Admin';
 
-  define('APP_NAME_URL', 'wefadmin');
+define('APP_NAME_URL', 'wefadmin');
 
-$app_token= "a8RyjGZnxf94"; //Não pode conter caracteres especiais
+$app_token = "a8RyjGZnxf94"; //Não pode conter caracteres especiais
 
 /*----------------------------------------*
  *  # CAMINHO DO SERVER PARA O SISTEMA
- *--------------------------------------*/ 
-if ( !defined('BASEURL') )	define('BASEURL', '/wefadmin/');
+ *--------------------------------------*/
+if (!defined('BASEURL'))  define('BASEURL', '/wefadmin/');
 
-if ( !defined('URLSERVER') ) define('URLSERVER', __DIR__ . '/wefadmin/' );
+if (!defined('URLSERVER')) define('URLSERVER', __DIR__ . '/wefadmin/');
 
 /*----------------------------------------*
  *  # CONEXÃO MYSQL LOCALHOST
- *--------------------------------------*/ 
- /*
- define('DB_NAME', 'u904669542_wefadmin');
- define('DB_USER', 'u904669542_wefadmin');
- define('DB_PASS', 'g@8RxDyy');
- define('DB_HOST', 'localhost');
- */
+ *--------------------------------------*/
 
-define('DB_NAME', 'u904669542_wefadmin');
-define('DB_USER', 'root');
-define('DB_PASS', 'usbw');
-define('DB_HOST', 'localhost');
+$whitelist = array(
+  '127.0.0.1',
+  '::1'
+);
 
+if (!in_array($_SERVER['REMOTE_ADDR'], $whitelist)) {
+  // Definindo a conexão com o BD (Hostinger)
+  define('DB_NAME', 'u904669542_wefadmin');
+  define('DB_USER', 'u904669542_wefadmin');
+  define('DB_PASS', 'g@8RxDyy');
+  define('DB_HOST', 'localhost');
+  
+} else {
+  // Definindo a conexão com o BD (Local)
+  define('DB_NAME', 'u904669542_wefadmin');
+  define('DB_USER', 'root');
+  define('DB_PASS', 'usbw');
+  define('DB_HOST', 'localhost');
+
+}
 
 /*----------------------------------------*
  *  #TIMEZONE
- *--------------------------------------*/ 
+ *--------------------------------------*/
 date_default_timezone_set('America/Sao_Paulo');
