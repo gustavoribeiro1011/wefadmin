@@ -11,7 +11,7 @@ if (mysqli_connect_errno()) { // Se a conexão falhar...
 } else {
 
   //Faz a consulta SQL
-  $sql = "SELECT * FROM forms ORDER BY 1 ASC";
+  $sql = "SELECT * FROM forms ORDER BY created DESC";
 
   //Retorna os resultados
   $result = mysqli_query($conn, $sql);

@@ -32,6 +32,7 @@ if (!$conn) {
 			$_SESSION['userid_'.$app_token] = $row["id"];
 			$_SESSION['user_'.$app_token] = $row["user"];
 			$_SESSION['username_'.$app_token] = ucfirst($row["username"]);			
+			$_SESSION['level_'.$app_token] = $row["level"];	
 
 			echo json_encode(array( 
 				"login" => "sucesso",
