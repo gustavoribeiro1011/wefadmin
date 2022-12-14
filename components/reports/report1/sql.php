@@ -11,7 +11,11 @@ if (mysqli_connect_errno()) { // Se a conexão falhar...
 } else {
 
   //Faz a consulta SQL
+<<<<<<< HEAD
   $sql = "SELECT * FROM forms ORDER BY created DESC";
+=======
+  $sql = "SELECT * FROM forms ORDER BY id desc";
+>>>>>>> a1170740a95f3378bfbc039e82d89bda837d332e
 
   //Retorna os resultados
   $result = mysqli_query($conn, $sql);
