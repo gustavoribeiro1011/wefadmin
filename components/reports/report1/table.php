@@ -6,7 +6,7 @@
             <th>Nome</th>
             <th>Telefone</th>
             <th>E-mail</th>
-            <th style="min-width:20px;">Data</th>
+            <th>Data</th>
         </tr>
     </thead>
     <tbody>

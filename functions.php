@@ -1,25 +1,25 @@
 <!-- Functions -->
 <script>
-function openPage(page){
+  function openPage(page,param) {
 
-if ( page == 'admin' ) {
-//carregar pagina
-$("#section-admin").load("components/admin/index.php");
+    if (page == 'admin') {
+      //carregar pagina
+      $("#main").load("components/admin/index.php");
 
-//ocultar
-$("#section-dashboard").css("display","none");
+    }
 
-//mostrar
-$("#section-admin").css("display","block");
-}
+    if (page == 'dashboard') {
+      //carregar pagina
+      $("#main").load("components/reports/report1/index.php");
+    }
 
-if ( page == 'dashboard' ) {
-//ocultar
-$("#section-admin").css("display","none");
+    if ( page == 'users' ) {
+      $("#main").load("components/users/users.php");
+    }
 
-//mostrar
-$("#section-dashboard").css("display","block");
+    if ( page == 'permission') {
+      $("#main").load("components/permission/permission.php?id="+param);
+    }
 
-}
-}
+  }
 </script>

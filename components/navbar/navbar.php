@@ -1,7 +1,7 @@
 <div class="fixed-top">
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a class="navbar-brand" href="<?= BASEURL; ?>index.php">
+      <a class="navbar-brand" type="button" href="javascript:void(0);" onClick="openPage('dashboard')">
         <?= $app_name ?>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

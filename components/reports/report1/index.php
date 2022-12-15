@@ -1,11 +1,10 @@
 <div class="container">
-<?php 
+  <?php
 
-include("sql.php");
-include("filter.php");
-include("table.php");
-include("script.php");
+  include("sql.php");
+  include("filter.php");
+  include("table.php");
+  include("script.php");
 
-?>
+  ?>
 </div>
-

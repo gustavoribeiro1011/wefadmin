@@ -3,9 +3,8 @@
 <html lang="pt-br">
 
 <?php
-//cabeçalho
-include('inc/head.php'); 
 include("functions.php");
+include('inc/head.php');
 ?>
 
 <body class="pt-4" style="margin-bottom: 32px;">
@@ -15,11 +14,10 @@ include("functions.php");
 		<?php include("components/navbar/navbar.php"); ?>
 	</section>
 
-	<section class="container-fluid" id="section-dashboard">
-		<?php include $_SERVER['DOCUMENT_ROOT'] . BASEURL ."pages/dashboard.php";?>
-	</section>
+	<div class="container-fluid mt-5" id="main">
+			<?php include $_SERVER['DOCUMENT_ROOT'] . BASEURL . 'components/reports/report1/index.php'; ?>
 
-	<section class="container-fluid" id="section-admin"></section>
+	</div>
 
 
 </body>
